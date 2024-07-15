@@ -15,6 +15,7 @@ mdate date null);
 
 -- 3p
 drop table if exists buytbl;
+
 create table buytbl
 (num int auto_increment primary key not null,
 userid char(8) not null,
@@ -33,8 +34,11 @@ insert into buytbl values(null, 'kbs', '운동화', null, 30, 1);
 insert into buytbl values(null, 'kbs', '노트북', '전자', 1000, 1);
 insert into buytbl values(null, 'jyp', '모니터', '전자', 200, 1); -- jyp가 usertbl에 없어서 오류
 
+select * from usertbl;
+
 -- 5p
 drop table if exists usertbl;
+
 create table usertbl
 (userid char(8) not null,
 name varchar(10) not null,
