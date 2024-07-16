@@ -3,6 +3,7 @@ create database tabledb;
 use tabledb;
 
 drop table if exists buytbl, usertbl;
+
 create table usertbl
 (userid char(8) not null primary key,
 name varchar(10) not null,
@@ -52,6 +53,14 @@ proddate datetime not null,
 prodcur char(10) null,
 constraint pk_prodtbl_prodcide_prodid primary key (prodcode, prodid));
 
--- 6p 아직 안 배움
+-- 6p
+create view v_user_buy
+as select u.userid, u.name, b.prodname, u.addr, concat(u.mobile1, u.mobile2) as '연락처'
+from usertbl u
+join buytbl b
+on u.userid = b.userid;
+
+select * from v_user_buy where name='김범수';
+
 
 

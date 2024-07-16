@@ -9,7 +9,7 @@ SELECT
 FROM dept_manager dm
 JOIN employees e ON d.emp_no = e.emp_no
 JOIN departments d ON dm.dept_no = d.dept_no
-where to_date like '9999-%';
+where to_date like '9999-%';dept_manager
 
 
 
