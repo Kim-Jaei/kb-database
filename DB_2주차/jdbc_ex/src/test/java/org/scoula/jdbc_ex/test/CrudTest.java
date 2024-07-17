@@ -37,6 +37,8 @@ public class CrudTest {
     @Order(2)
     public void selectUser() throws SQLException {
         String sql = "select * from users";
+        // try(PreparedStatement pstmt = conn.prepareStatement(sql));
+        // ResultSet rs = pstmt.executeQuery();
         try(Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sql);){
             while(rs.next()){

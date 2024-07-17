@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+// 테이블들의 컬럼을 지정해 놓은 클래스
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

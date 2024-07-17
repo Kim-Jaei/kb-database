@@ -8,6 +8,7 @@ import org.scoula.todo.domain.TodoVO;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.function.Supplier;
 
 public class TodoService {
@@ -39,6 +40,7 @@ public class TodoService {
             System.out.println("총 건수: " + list.size());
             System.out.println("=========================================");
             for (TodoVO todo : list) {
+                // id] 제목(완료여부) (개행)
                 System.out.printf("%03d] %s%s\n", todo.getId(), todo.getTitle(),
                         todo.getDone() ? "(완료)" : "");
             }
