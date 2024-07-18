@@ -1,0 +1,12 @@
+pluginManagement {
+    plugins {
+        id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+    }
+}
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+}
+rootProject.name = 'ScoulaTodoSpring'
+include ':ScoulaCli'
+project(':ScoulaCli').projectDir=new File('C:\\KB_Fullstack\\05_database\\05_database_Code\\DB_2주차\\ScoulaLib\\scoulacli')
+//project(':ScoulaCli').projectDir=new File('C:\\Users\\yhkim\\OneDrive\\KB_ITs_Your_Life\\source\\java\\CLI\\ScoulaLib\\scoulacli')
