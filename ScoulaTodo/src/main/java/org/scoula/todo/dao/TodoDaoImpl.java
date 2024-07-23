@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class TodoDaoImpl implements TodoDao {
     @Override
@@ -67,29 +66,8 @@ public class TodoDaoImpl implements TodoDao {
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, userId);
             try (ResultSet rs = ps.executeQuery()) {
-                    return mapList(rs);
-                }
+                return mapList(rs);
             }
         }
-    }
-
-    @Override
-    public Optional<TodoVO> get(String userId, Long id) throws SQLException {
-        return Optional.empty();
-    }
-
-    @Override
-    public List<TodoVO> search(String userId, String keyword) throws SQLException {
-        return List.of();
-    }
-
-    @Override
-    public int update(String userId, TodoVO todo) throws SQLException {
-        return 0;
-    }
-
-    @Override
-    public int delete(String userId, Long id) throws SQLException {
-        return 0;
     }
 }
